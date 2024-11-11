@@ -256,6 +256,73 @@
       color: #f5f5f5;
       line-height: 1.6;
     }
+
+    /* Testimonial Section */
+  .testimonials {
+    padding: 60px 20px;
+    background-color: #222222;
+    color: #f5f5f5;
+  }
+
+  .testimonials h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff4d4d;
+  }
+
+  .testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .testimonial {
+    flex: 1;
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+  }
+
+  .testimonial h3 {
+    font-size: 1.2rem;
+    color: #ff4d4d;
+    margin-bottom: 5px;
+  }
+
+  .client-info {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-style: italic;
+  }
+
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .testimonial-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial {
+      margin-bottom: 20px;
+    }
+  }
     /* Contact Section */
     .contact {
       padding: 50px 20px;
@@ -374,8 +441,7 @@
       <h1>Hello, I'm Ann</h1>
       <p class="intro">A skincare specialist, hairstylist, and beauty expert</p>
       <p>
-        Meet **Ann Wairimu**, a seasoned beauty expert with a passion for bringing out the natural beauty in everyone she works with. With years of hands-on experience in skincare, hairstyling, facials, and manicure/pedicure services, Ann has built a reputation for her meticulous attention to detail and commitment to delivering results that exceed her clients' expectations.
-      </p>
+        Meet **Ann**, a seasoned beauty expert with a passion for bringing out the natural beauty in everyone she works with. 
       <p class="animated-text" id="animated-text"></p>
       <a href="#services" class="btn" onclick="scrollToSection('services')">View Services</a>
       <a href="#contact" class="btn" onclick="scrollToSection('contact')">Book Now</a>
@@ -420,6 +486,29 @@
     </div>
   </section>
 
+  <!-- Testimonial Section -->
+<section id="testimonials" class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"Ann is an absolute professional! My facial was heavenly, and my skin has never looked better. I left feeling refreshed and rejuvenated. Highly recommend!"</p>
+        <h3>- Sarah K.</h3>
+        <p class="client-info">Skincare & Facial Client</p>
+      </div>
+      <div class="testimonial">
+        <p>"I’ve never been happier with my nails! Ann’s manicure skills are top-notch. She made me feel relaxed and pampered during the whole session."</p>
+        <h3>- Emily J.</h3>
+        <p class="client-info">Manicure & Pedicure Client</p>
+      </div>
+      <div class="testimonial">
+        <p>"I’ve had my hair styled by Ann for several events, and every time, she amazes me! From trendy styles to elegant updos, she’s my go-to hairstylist!"</p>
+        <h3>- Ashley R.</h3>
+        <p class="client-info">Hairstyling Client</p>
+      </div>
+    </div>
+  </section>
+  
+
   <!-- Contact Section -->
 <section id="contact" class="contact">
     <h2>Contact Ann</h2>
@@ -447,12 +536,6 @@
           <i class="fab fa-tiktok"></i>
       </a>
     </div>
-    <footer>
-        <!-- Copyright Information -->
-  <div class="copyright">
-    <p>&copy; <span id="year"></span> Ann Wairimu. All Rights Reserved</p>
-  </div>
-    </footer>
 
   </section>
 
